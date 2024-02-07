@@ -2,10 +2,14 @@
   "name": "backend-project",
   "version": "1.0.0",
   "description": "backend project using Mern",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ndoemon src/index.js"
   },
   "author": "md huzaifa ansari",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
 }
