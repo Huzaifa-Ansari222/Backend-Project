@@ -1,12 +1,12 @@
-// require('dotenv').config({path:'./env'})
+// require('dotenv').config({path:'./env'}) //not using require format so we r using import and chnge script experimental verison
 import dotenv from "dotenv"
 import connectDB from "./db/index.js";
+import { app } from "./app.js";
 
+//using import instead of require
 dotenv.config({
     path:'./env'
 })
-
-
 
 connectDB()
 .then(()=>{
