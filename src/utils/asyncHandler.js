@@ -1,10 +1,19 @@
 //promise code
+// wrap asynchronous route handlers 
+// takes one parameter, requestHandler, which is an asynchronous function 
 const asyncHandler = (requestHandler) => {
-    (req,res,next) => {
-        Promise.resolve(requestHandler(req,res,next)).catch((err) => next(err)) 
+    return (req,res,next) => {//handle the incoming HTTP requests.
+        Promise.resolve(requestHandler(req,res,next))
+        .catch((err) => next(err)) 
     }
 }
 export {asyncHandler}
+
+
+
+
+
+
 
 //try catch code
 //high order func
